@@ -1,0 +1,17 @@
+<% @errors.each do |error| %>
+  <div class='alert alert-danger mt-5' role='alert'>
+    <%= error.message %>
+  </div>
+<% end %>
+
+<div class='card mx-auto mt-5 box '>
+  <form action='/find_user'>
+    <div class='form-check'>
+      <label for='username' id='username'>お名前</label>
+      <input type='text' name='name' class='form-control' id='username' placeholder='五石凪' required>
+      <div class='invalid-feedback'>名前は入力してください</div>
+      <small id='username-help' class='form-text text-muted'>フルネームで漢字、もしくはslackのユーザー名でお願いします</small>
+      <button type='submit' class='btn btn-primary mt-4' style='width: 100%;'>検索</button>
+    </div>
+  </form>
+</div>
